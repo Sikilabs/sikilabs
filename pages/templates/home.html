@@ -1,0 +1,21 @@
+{% load pages_tags mezzanine_tags i18n staticfiles %}
+{% extends 'base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block title %}
+    {{ page.title }}blabla
+{% endblock %}
+ttttttttt
+{% block content %}
+
+    <h1 class="cover-heading">{{ page.catch_words }}</h1>
+    <p class="lead">
+    dffwefw
+        {{ page.template }}
+    </p>
+    <p class="lead">
+        <a href="{{ page.action_btn_lnk }}" class="btn btn-lg btn-secondary">{{ page.action_btn_text }}</a>
+    </p>
+
+{% endblock %}

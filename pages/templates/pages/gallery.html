@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load pages_tags mezzanine_tags i18n staticfiles %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static "css/gallery.css" %}">
+{% endblock css %}
+
+{% block main %}
+
+    <h1 class="cover-heading">{{ page.catch_words }}</h1>
+    <p class="lead">
+        {% editable page.gallery.content %}
+        {{ page.gallery.content|richtext_filters|safe }}
+        {% endeditable %}
+        <div class="row">
+            {% with page.gallery.images.all as images %}
+                {% for image in images %}
+                    <div class="col-md-3 col-sm-4 col-xs-6">
+                        <a class="thumbnail" rel="#image-{{ image.id }}" title="{{ image.description }}" href="#">
+                            <img class="img-responsive img-gallery" src="{{ MEDIA_URL }}{% thumbnail image.file 131 75 %}">
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endwith %}
+        </div>
+    </p>
+
+{% endblock %}
