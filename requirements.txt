@@ -1,1 +1,2 @@
-Mezzanine==4.2.3
+# Mezzanine==4.2.3
+git+https://github.com/diopib/mezzanine.git
