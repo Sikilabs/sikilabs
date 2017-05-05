@@ -209,8 +209,22 @@ body {
   }
 }
 
-.sikinav{
+.sikinav-desktop{
   position: absolute;
   left: 50%;
   top: 66%;
+}
+
+.sikinav-mobile{
+  display:none;
+}
+
+@media (max-width : 420px) {
+    .sikinav-mobile {
+        display: block;
+    }
+
+    .sikinav-desktop {
+        display: none;
+    }
 }

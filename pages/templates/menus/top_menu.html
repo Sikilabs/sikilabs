@@ -1,5 +1,12 @@
 {% load pages_tags %}
-<nav class="nav nav-masthead sikinav">
+<nav class="nav nav-masthead sikinav-desktop">
+{% for page in page_branch %}
+    <a class="nav-link {% if page.is_current_or_ascendant %}active{% endif %}" href="{{ page.get_absolute_url }}">{{ page.title }}</a>
+    {% page_menu page %}
+{% endfor %}
+</nav>
+
+<nav class="nav nav-masthead sikinav-mobile">
 {% for page in page_branch %}
     <a class="nav-link {% if page.is_current_or_ascendant %}active{% endif %}" href="{{ page.get_absolute_url }}">{{ page.title }}</a>
     {% page_menu page %}
