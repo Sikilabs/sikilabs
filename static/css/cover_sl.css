@@ -30,8 +30,8 @@ a:hover {
 }
 
 .btn-primary{
-    color: #fff !important;;
-    background-color: #000000 !important;;
+    color: #000000 !important;;
+    background-color: #fec745 !important;;
     border-color: #000000 !important;;
 }
 
@@ -60,9 +60,9 @@ input[type="color"]:focus,
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #fff;
+  color: #000000;
   text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #000;
+  background-color: #fec745;
   border: .05rem solid #000;
 }
 
@@ -139,7 +139,7 @@ body {
 
 .nav-masthead .active {
   color: #000;
-  border-bottom-color: #000;
+  border-bottom-color: #fec745;
 }
 
 @media (min-width: 48em) {
@@ -212,7 +212,7 @@ body {
 .sikinav-desktop{
   position: absolute;
   left: 50%;
-  top: 66%;
+  top: 49%;
 }
 
 .sikinav-mobile{
